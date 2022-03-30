@@ -40,9 +40,18 @@ function colorChoose(pcMoves) {
             yellowOne.classList.toggle('amarelo--active')
                 // sounds[index].play()
         }
+        cleanColors()
     }
 }
 
+function cleanColors() {
+    setTimeout(() => {
+        greenOne.classList.remove('verde--active')
+        redOne.classList.remove('vermelho--active')
+        blueOne.classList.remove('azul--active')
+        yellowOne.classList.remove('amarelo--active')
+    }, 1000)
+}
 //  EventLinsteners das Cores p/ gravar o click e armazenar onde foi no array playersMoves
 const greenOne = document.querySelector('.verde')
 greenOne.addEventListener('click', event => {
@@ -53,26 +62,32 @@ const redOne = document.querySelector('.vermelho')
 redOne.addEventListener('click', event => {
     playerMoves.push(1)
     verifyMoves(pcMoves, playerMoves)
+
 })
 const blueOne = document.querySelector('.azul')
 blueOne.addEventListener('click', event => {
     playerMoves.push(2)
     verifyMoves(pcMoves, playerMoves)
+
 })
 const yellowOne = document.querySelector('.amarelo')
 yellowOne.addEventListener('click', event => {
     playerMoves.push(3)
     verifyMoves(pcMoves, playerMoves)
+
 })
 
 
 //Função para pausar o jogo, verificar se o jogador acertou os movimentos e reiniciar ou continuar.
 function verifyMoves(pcMoves, playerMoves) {
-    if (pcMoves == playerMoves) {
-        score++
-        phaseLevel++
-        pcMovement(phaseLevel)
-    } else {
-        alert('Você perdeu!')
-    }
+    setTimeout(() => {
+        for (let index = 0; index <= pcMoves.length; index++)
+            if (pcMoves[index] == playerMoves[index]) {
+                score++
+                phaseLevel++
+                pcMovement(phaseLevel)
+            } else {
+                alert('Você perdeu!')
+            }
+    }, 5000)
 }
