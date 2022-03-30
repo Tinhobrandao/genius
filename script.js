@@ -6,17 +6,18 @@ let phaseLevel = 0
 let score = 0
 let numeroSorteado = 0
 
-
-// Função para pegar um número aleatório de 0 a 3 e armazenar no array pcMoves
+let interval = 0
+    // Função para pegar um número aleatório de 0 a 3 e armazenar no array pcMoves
 function pcMovement() {
-    setTimeout(() => {
-        for (let index = 0; index <= phaseLevel; index++)
+    interval = setInterval(() => {
+        for (let index = 0; index <= phaseLevel; index++) {
             numeroSorteado = (Math.floor(Math.random() * 4))
-        pcMoves.push(numeroSorteado)
-        colorChoose(pcMoves) // Aqui é chamada a função para escolher a cor que será acesa
-    }, 2000)
-
+            pcMoves.push(numeroSorteado)
+            colorChoose(pcMoves) // Aqui é chamada a função para escolher a cor que será acesa
+        }
+    }, 3000)
 }
+
 
 
 // Função para acender a cor que o PC escolher
@@ -51,43 +52,63 @@ function cleanColors() {
         blueOne.classList.remove('azul--active')
         yellowOne.classList.remove('amarelo--active')
     }, 1000)
+    if (pcMoves.length == playerMoves.length) {
+        verifyMoves(pcMoves, playerMoves)
+    }
 }
+
+
+
+
 //  EventLinsteners das Cores p/ gravar o click e armazenar onde foi no array playersMoves
 const greenOne = document.querySelector('.verde')
 greenOne.addEventListener('click', event => {
     playerMoves.push(0)
-    verifyMoves(pcMoves, playerMoves)
 })
+
 const redOne = document.querySelector('.vermelho')
 redOne.addEventListener('click', event => {
     playerMoves.push(1)
-    verifyMoves(pcMoves, playerMoves)
-
 })
+
 const blueOne = document.querySelector('.azul')
 blueOne.addEventListener('click', event => {
     playerMoves.push(2)
-    verifyMoves(pcMoves, playerMoves)
-
 })
+
 const yellowOne = document.querySelector('.amarelo')
 yellowOne.addEventListener('click', event => {
     playerMoves.push(3)
-    verifyMoves(pcMoves, playerMoves)
-
 })
 
+
+
+// function setarTimeout(function) {
+
+
+// }
+// function verificaCliques() {
+//     //verificar se o clique(índice) é igual ao movimento do pc
+// }
 
 //Função para pausar o jogo, verificar se o jogador acertou os movimentos e reiniciar ou continuar.
 function verifyMoves(pcMoves, playerMoves) {
     setTimeout(() => {
-        for (let index = 0; index <= pcMoves.length; index++)
-            if (pcMoves[index] == playerMoves[index]) {
+        for (let index = 0; index <= pcMoves.length; index++) {
+            if (pcMoves === playerMoves) {
                 score++
                 phaseLevel++
                 pcMovement(phaseLevel)
-            } else {
-                alert('Você perdeu!')
+                const vitoria = document.createElement('h1').innerText('Boa! Continue!')
+                document.querySelector('h1').appendChild(vitoria)
+
+            } else if (pcMoves[index] !== playerMoves[index]) {
+                const derrota = document.createElement('h1').innerText('Você perdeu!')
+                document.querySelector('h1').appendChild(derrota)
+
+                clearInterval(interval)
+
             }
-    }, 5000)
+        }
+    }, 3000)
 }
