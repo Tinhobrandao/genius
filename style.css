@@ -1,0 +1,124 @@
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+.container {
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container h1 {
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.circuloPreto {
+    background-color: #0a0903;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 200px;
+    border: 2px solid #0a0903;
+}
+
+.circuloPreto div {
+    border: 8px solid #0a0903;
+}
+
+.verde {
+    box-sizing: border-box;
+    background-color: #157f1f;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 200px;
+}
+
+.verde--active {
+    background-color: #78f785;
+}
+
+.vermelho {
+    box-sizing: border-box;
+    background-color: #7a1010;
+    width: 200px;
+    height: 200px;
+    border-top-right-radius: 200px;
+}
+
+.vermelho--active {
+    background-color: #fa3706;
+}
+
+.azul {
+    box-sizing: border-box;
+    background-color: #1446a0;
+    width: 200px;
+    height: 200px;
+    border-bottom-left-radius: 200px;
+}
+
+.azul--active {
+    background-color: #427ce7;
+}
+
+.amarelo {
+    box-sizing: border-box;
+    background-color: #9c620a;
+    width: 200px;
+    height: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.amarelo--active {
+    background-color: #ffaa2a;
+}
+
+.circuloCentro {
+    box-sizing: border-box;
+    background-color: #0a0903;
+    width: 210px;
+    height: 210px;
+    border-radius: 210px;
+    margin-left: -300px;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textosDeDentro {
+    color: antiquewhite;
+    text-align: center;
+    align-self: center;
+}
+
+#start,
+#reset {
+    color: white;
+    width: 40%;
+    height: 4vh;
+    font-weight: lighter;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(39, 37, 37), rgb(38, 38, 77));
+}
+
+#start:hover {
+    transform: scale(1.2);
+    color: black;
+    background: white;
+    transition: 1s;
+}
+
+#reset:hover {
+    transform: scale(1.2);
+    color: black;
+    background: white;
+    transition: 1s;
+}
