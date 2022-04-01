@@ -32,12 +32,13 @@ body {
     border: 8px solid #0a0903;
 }
 
-.verde {
+.pad--verde {
     box-sizing: border-box;
     background-color: #157f1f;
     width: 200px;
     height: 200px;
     border-top-left-radius: 200px;
+    cursor: pointer;
 }
 
 .verde--active {
@@ -45,12 +46,13 @@ body {
     box-shadow: 0px 5px 20px 15px rgb(0, 255, 42), 6px 8px 20px 0px rgb(0, 255, 42), 6px 8px 20px 0px rgb(0, 255, 42), 6px 8px 20px 0px rgb(0, 255, 42);
 }
 
-.vermelho {
+.pad--vermelho {
     box-sizing: border-box;
     background-color: #7a1010;
     width: 200px;
     height: 200px;
     border-top-right-radius: 200px;
+    cursor: pointer;
 }
 
 .vermelho--active {
@@ -58,12 +60,13 @@ body {
     box-shadow: 0px 5px 20px 15px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0);
 }
 
-.azul {
+.pad--azul {
     box-sizing: border-box;
     background-color: #1446a0;
     width: 200px;
     height: 200px;
     border-bottom-left-radius: 200px;
+    cursor: pointer;
 }
 
 .azul--active {
@@ -71,12 +74,13 @@ body {
     box-shadow: 0px 5px 20px 15px rgb(0, 26, 255), 6px 8px 20px 0px rgb(4, 0, 255), 6px 8px 20px 0px rgb(0, 26, 255), 6px 8px 20px 0px rgb(38, 0, 255);
 }
 
-.amarelo {
+.pad--amarelo {
     box-sizing: border-box;
     background-color: #9c620a;
     width: 200px;
     height: 200px;
     border-bottom-right-radius: 200px;
+    cursor: pointer;
 }
 
 .amarelo--active {
@@ -119,6 +123,7 @@ body {
     color: black;
     background: white;
     transition: 1s;
+    cursor: pointer;
 }
 
 #reset:hover {
@@ -126,6 +131,7 @@ body {
     color: black;
     background: white;
     transition: 1s;
+    cursor: pointer;
 }
 
 .derrota,
