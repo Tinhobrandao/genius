@@ -1,44 +1,52 @@
 body {
     font-family: 'Space Mono', monospace;
-}
-
-.container {
-    background-color: rgba(34, 33, 33, 0.685);
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    font-size: 62.5%;
 }
 
-.container h1 {
+.container {
+    background: linear-gradient(470deg, lightgray, rgb(39, 38, 38)), lightslategray;
+    animation: containerTransition 10s ease infinite;
+    background-size: 600%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .geniusName {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 6rem;
     margin-bottom: 40px;
 }
 
 .circuloPreto {
     background-color: #0a0903;
-    width: 400px;
-    height: 400px;
+    width: 20.8%;
+    height: 44%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     border-radius: 200px;
-    border: 2px solid #0a0903;
-}
-
-.circuloPreto div {
-    border: 8px solid #0a0903;
+    border: 2px solid rgb(39, 38, 38);
 }
 
 .pad--verde {
     box-sizing: border-box;
     background-color: #157f1f;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-top-left-radius: 200px;
     cursor: pointer;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .verde--active {
@@ -49,10 +57,11 @@ body {
 .pad--vermelho {
     box-sizing: border-box;
     background-color: #7a1010;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-top-right-radius: 200px;
     cursor: pointer;
+    border-bottom: 2px solid white;
 }
 
 .vermelho--active {
@@ -63,10 +72,11 @@ body {
 .pad--azul {
     box-sizing: border-box;
     background-color: #1446a0;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-bottom-left-radius: 200px;
     cursor: pointer;
+    border-right: 2px solid white;
 }
 
 .azul--active {
@@ -77,8 +87,8 @@ body {
 .pad--amarelo {
     box-sizing: border-box;
     background-color: #9c620a;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-bottom-right-radius: 200px;
     cursor: pointer;
 }
@@ -91,15 +101,16 @@ body {
 
 .circuloCentro {
     box-sizing: border-box;
-    background-color: #0a0903;
-    width: 210px;
-    height: 210px;
+    background-color: rgb(39, 38, 38);
+    width: 10%;
+    height: 20%;
     border-radius: 210px;
-    margin-left: -300px;
-    margin-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid white;
+    position: absolute;
+    margin-top: 7vw;
 }
 
 .textosDeDentro {
@@ -108,54 +119,74 @@ body {
     align-self: center;
 }
 
-#start,
-#reset {
-    color: white;
+.start,
+.reset {
+    color: aqua;
     width: 40%;
     height: 4vh;
-    font-weight: lighter;
+    font-size: 0.7rem;
+    font-weight: medium;
     border-radius: 10px;
     background: linear-gradient(to right, rgb(39, 37, 37), rgb(38, 38, 77));
 }
 
-#start:hover {
+.start:hover {
     transform: scale(1.2);
     color: black;
-    background: white;
+    background: aqua;
     transition: 1s;
     cursor: pointer;
 }
 
-#reset:hover {
+.reset:hover {
     transform: scale(1.2);
     color: black;
-    background: white;
+    background: aqua;
     transition: 1s;
     cursor: pointer;
 }
 
 .derrota,
 .vitoria {
-    color: black;
-    font-size: 20px;
+    font-size: 2.5rem;
+    color: aqua;
+    position: absolute;
 }
 
 .gameStats {
     background-color: #1446a0;
-    height: fit-content;
-    width: 210px;
+    width: 20vw;
     margin: 0 auto;
     margin-top: 30px;
 }
 
-.levelDisplay {
-    color: white;
+.levelDisplay,
+.scoreDisplay,
+.nameDisplay {
+    letter-spacing: 0.5rem;
+    color: aqua;
     border: 1px solid white;
     text-align: center;
+    font-size: 1rem;
 }
 
-.scoreDisplay {
-    color: white;
-    border: 1px solid white;
+.payAtention,
+.playerTurn {
+    font-size: 1.5rem;
+    width: 30vw;
+    color: aqua;
     text-align: center;
+    position: fixed;
+}
+
+@keyframes containerTransition {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 50 100%;
+    }
 }
