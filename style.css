@@ -1,147 +1,116 @@
 body {
     font-family: 'Space Mono', monospace;
-}
-
-.container {
-    background-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    font-size: 62.5%;
 }
 
-.container h1 {
+.container {
+    background: linear-gradient(470deg, lightgray, rgb(39, 38, 38)), lightslategray;
+    animation: containerTransition 10s ease infinite;
+    background-size: 600%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .geniusName {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 6rem;
     margin-bottom: 40px;
 }
 
-@media screen and (max-width: 400px) {
-  .container h1 {
-    font-size: 15vw;
-  }
-}
 .circuloPreto {
-    position: relative;
     background-color: #0a0903;
-    width: 400px;
-    height: 400px;
+    width: 20.8%;
+    height: 44%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     border-radius: 200px;
-    border: 2px solid #0a0903;
+    border: 2px solid rgb(39, 38, 38);
 }
 
-@media screen and (max-width: 400px) {
-    .circuloPreto {
-        width: 100vw;
-        height: 100vw;
-        background-color: red;
-    }
-}
-
-.circuloPreto div {
-    border: 8px solid #0a0903;
-}
-
-.verde {
+.pad--verde {
     box-sizing: border-box;
     background-color: #157f1f;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-top-left-radius: 200px;
-}
-
-@media screen and (max-width: 400px) {
-    .verde {
-        width: 50vw;
-        height: 50vw;
-    }
+    cursor: pointer;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .verde--active {
     background-color: #78f785;
+    box-shadow: 0px 5px 20px 15px rgb(0, 255, 42), 6px 8px 20px 0px rgb(0, 255, 42), 6px 8px 20px 0px rgb(0, 255, 42), 6px 8px 20px 0px rgb(0, 255, 42);
 }
 
-.vermelho {
+.pad--vermelho {
     box-sizing: border-box;
     background-color: #7a1010;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-top-right-radius: 200px;
-}
-
-@media screen and (max-width: 400px) {
-    .vermelho {
-        width: 50vw;
-        height: 50vw;
-    }
+    cursor: pointer;
+    border-bottom: 2px solid white;
 }
 
 .vermelho--active {
     background-color: #fa3706;
+    box-shadow: 0px 5px 20px 15px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0);
 }
 
-.azul {
+.pad--azul {
     box-sizing: border-box;
     background-color: #1446a0;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-bottom-left-radius: 200px;
-}
-
-@media screen and (max-width: 400px) {
-    .azul {
-        width: 50vw;
-        height: 50vw;
-    }
+    cursor: pointer;
+    border-right: 2px solid white;
 }
 
 .azul--active {
     background-color: #427ce7;
+    box-shadow: 0px 5px 20px 15px rgb(0, 26, 255), 6px 8px 20px 0px rgb(4, 0, 255), 6px 8px 20px 0px rgb(0, 26, 255), 6px 8px 20px 0px rgb(38, 0, 255);
 }
 
-.amarelo {
+.pad--amarelo {
     box-sizing: border-box;
     background-color: #9c620a;
-    width: 200px;
-    height: 200px;
+    width: 10.4vw;
+    height: 22vh;
     border-bottom-right-radius: 200px;
-}
-
-@media screen and (max-width: 400px) {
-    .amarelo {
-        width: 50vw;
-        height: 50vw;
-    }
+    cursor: pointer;
 }
 
 .amarelo--active {
     background-color: #ffaa2a;
+    box-shadow: 0px 5px 20px 15px rgb(255, 255, 0), 6px 8px 20px 0px rgb(255, 255, 0), 6px 8px 20px 0px rgb(255, 255, 0), 6px 8px 20px 0px rgb(255, 255, 0);
+    border-style: hidden;
 }
 
 .circuloCentro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
-    background-color: #0a0903;
-    width: 210px;
-    height: 210px;
+    background-color: rgb(39, 38, 38);
+    width: 10%;
+    height: 20%;
     border-radius: 210px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-@media screen and (max-width: 400px) {
-    .circuloCentro {
-        width: 53vw;
-        height: 53vw;
-    }
+    border: 2px solid white;
+    position: absolute;
+    margin-top: 7vw;
 }
 
 .textosDeDentro {
@@ -150,34 +119,74 @@ body {
     align-self: center;
 }
 
-#start,
-#reset {
-    color: white;
+.start,
+.reset {
+    color: aqua;
     width: 40%;
     height: 4vh;
-    font-size: 11.5px;
-    font-weight: lighter;
+    font-size: 0.7rem;
+    font-weight: medium;
     border-radius: 10px;
     background: linear-gradient(to right, rgb(39, 37, 37), rgb(38, 38, 77));
 }
 
-@media screen and (max-width: 400px) {
-  #start,
-  #reset {
-   font-size: 3vw; 
-  }
-}
-
-#start:hover {
+.start:hover {
     transform: scale(1.2);
     color: black;
-    background: white;
+    background: aqua;
     transition: 1s;
+    cursor: pointer;
 }
 
-#reset:hover {
+.reset:hover {
     transform: scale(1.2);
     color: black;
-    background: white;
+    background: aqua;
     transition: 1s;
+    cursor: pointer;
+}
+
+.derrota,
+.vitoria {
+    font-size: 2.5rem;
+    color: aqua;
+    position: absolute;
+}
+
+.gameStats {
+    background-color: #1446a0;
+    width: 20vw;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.levelDisplay,
+.scoreDisplay,
+.nameDisplay {
+    letter-spacing: 0.5rem;
+    color: aqua;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.payAtention,
+.playerTurn {
+    font-size: 1.5rem;
+    width: 30vw;
+    color: aqua;
+    text-align: center;
+    position: fixed;
+}
+
+@keyframes containerTransition {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 50 100%;
+    }
 }
