@@ -18,7 +18,13 @@ body {
     margin-bottom: 40px;
 }
 
+@media screen and (max-width: 400px) {
+  .container h1 {
+    font-size: 15vw;
+  }
+}
 .circuloPreto {
+    position: relative;
     background-color: #0a0903;
     width: 400px;
     height: 400px;
@@ -26,6 +32,14 @@ body {
     flex-wrap: wrap;
     border-radius: 200px;
     border: 2px solid #0a0903;
+}
+
+@media screen and (max-width: 400px) {
+    .circuloPreto {
+        width: 100vw;
+        height: 100vw;
+        background-color: red;
+    }
 }
 
 .circuloPreto div {
@@ -40,6 +54,13 @@ body {
     border-top-left-radius: 200px;
 }
 
+@media screen and (max-width: 400px) {
+    .verde {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
 .verde--active {
     background-color: #78f785;
 }
@@ -50,6 +71,13 @@ body {
     width: 200px;
     height: 200px;
     border-top-right-radius: 200px;
+}
+
+@media screen and (max-width: 400px) {
+    .vermelho {
+        width: 50vw;
+        height: 50vw;
+    }
 }
 
 .vermelho--active {
@@ -64,6 +92,13 @@ body {
     border-bottom-left-radius: 200px;
 }
 
+@media screen and (max-width: 400px) {
+    .azul {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
 .azul--active {
     background-color: #427ce7;
 }
@@ -76,21 +111,37 @@ body {
     border-bottom-right-radius: 200px;
 }
 
+@media screen and (max-width: 400px) {
+    .amarelo {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
 .amarelo--active {
     background-color: #ffaa2a;
 }
 
 .circuloCentro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     background-color: #0a0903;
     width: 210px;
     height: 210px;
     border-radius: 210px;
-    margin-left: -300px;
-    margin-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+    .circuloCentro {
+        width: 53vw;
+        height: 53vw;
+    }
 }
 
 .textosDeDentro {
@@ -104,9 +155,17 @@ body {
     color: white;
     width: 40%;
     height: 4vh;
+    font-size: 11.5px;
     font-weight: lighter;
     border-radius: 10px;
     background: linear-gradient(to right, rgb(39, 37, 37), rgb(38, 38, 77));
+}
+
+@media screen and (max-width: 400px) {
+  #start,
+  #reset {
+   font-size: 3vw; 
+  }
 }
 
 #start:hover {
