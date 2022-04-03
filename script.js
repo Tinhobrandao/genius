@@ -123,6 +123,7 @@ function addEventToPads() {
         })
     })
 }
+
 let counter = 0
 
 function colorChoose(pcMoves) {
@@ -189,7 +190,7 @@ function verifyMoves(pcMoves, playerMoves) {
 
     } else {
         const derrota = document.createElement('h1')
-        derrota.innerText = 'Vish! Deu não!'
+        derrota.innerText = `Não foi dessa vez. Sua pontuação foi: ${score}. Tente novamente!`
         document.querySelector('body').appendChild(derrota)
         derrota.classList.add('derrota')
         const audioDerrota = new Audio('sounds/derrota.mp3')
