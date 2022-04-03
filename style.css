@@ -231,6 +231,13 @@ body {
     position: fixed;
 }
 
+@media screen and (max-width: 414px) {
+    .vitoria,
+    .derrota {
+        font-size: 1rem;
+    }
+}
+
 @keyframes containerTransition {
     0% {
         background-position: 0% 50%;
