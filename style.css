@@ -27,6 +27,12 @@ body {
     margin-bottom: 40px;
 }
 
+@media screen and (max-width: 414px) {
+    .container .geniusName {
+        font-size: 15vw;
+    }
+}
+
 .circuloPreto {
     background-color: #0a0903;
     width: 20.8%;
@@ -38,6 +44,14 @@ body {
     border: 2px solid rgb(39, 38, 38);
 }
 
+@media screen and (max-width: 414px) {
+    .circuloPreto {
+        width: 100vw;
+        height: 100vw;
+        border: 1px solid black;
+    }
+}
+
 .pad--verde {
     box-sizing: border-box;
     background-color: #157f1f;
@@ -47,6 +61,13 @@ body {
     cursor: pointer;
     border-right: 2px solid white;
     border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 414px) {
+    .pad--verde {
+        width: 50vw;
+        height: 50vw;
+    }
 }
 
 .verde--active {
@@ -64,6 +85,13 @@ body {
     border-bottom: 2px solid white;
 }
 
+@media screen and (max-width: 414px) {
+    .pad--vermelho {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
 .vermelho--active {
     background-color: #fa3706;
     box-shadow: 0px 5px 20px 15px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0), 6px 8px 20px 0px rgb(255, 0, 0);
@@ -79,6 +107,13 @@ body {
     border-right: 2px solid white;
 }
 
+@media screen and (max-width: 414px) {
+    .pad--azul {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
 .azul--active {
     background-color: #427ce7;
     box-shadow: 0px 5px 20px 15px rgb(0, 26, 255), 6px 8px 20px 0px rgb(4, 0, 255), 6px 8px 20px 0px rgb(0, 26, 255), 6px 8px 20px 0px rgb(38, 0, 255);
@@ -91,6 +126,13 @@ body {
     height: 22vh;
     border-bottom-right-radius: 200px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 414px) {
+    .pad--amarelo {
+        width: 50vw;
+        height: 50vw;
+    }
 }
 
 .amarelo--active {
@@ -111,6 +153,14 @@ body {
     border: 2px solid white;
     position: absolute;
     margin-top: 7vw;
+}
+
+@media screen and (max-width: 414px) {
+    .circuloCentro {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 100px;
+    }
 }
 
 .textosDeDentro {
@@ -155,7 +205,7 @@ body {
 
 .gameStats {
     background-color: #1446a0;
-    width: 20vw;
+    width: 42vw;
     margin: 0 auto;
     margin-top: 30px;
 }
